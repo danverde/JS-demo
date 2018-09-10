@@ -7,52 +7,17 @@
     <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <!-- <script src="main.js"></script> -->
-    <script>
-        function changeSign() {
-            console.log('changeSign called');
-        }
-
-        function getPercent() {
-            console.log('getPercent called');
-        }
-
-        function operandSelected(operandElement) {
-            console.log('operandSelected called!');
-        }
-
-        function numberSelected(numberElement) {
-            /* get new item */
-            var numberValue = numberElement.innerHTML;
-            
-            /* get screen contents */
-            var screen = document.getElementById('output');
-            var screenText = screen.innerHTML;
-
-            /* add new item */
-            screenText += numberValue;
-
-            /* output to screen */
-            screen.innerHTML  = screenText;
-        }
-
-        function clearScreen() {
-            document.getElementById('output').innerHTML = '';
-        }
-
-        function caclulate() {
-            console.log('calculate called!');
-
-        }
-    </script>
+    <script src="calculator.js"></script>
+    <!-- <script>
+    </script> -->
 </head>
 
 <body>
     <div id='calculator'>
-        <div id="output" class="row"></div>
+        <div id="screen" class="row">0</div>
         <div class="row">
-            <div class="button setting" onclick="clearScreen()">AC</div>
-            <div class="button setting" onclick="changeSign()">+/-</div>
+            <div class="button setting" onclick="allClear()">AC</div>
+            <div class="button setting" onclick="cancelEntry()">CE</div>
             <div class="button setting" onclick="getPercent()">%</div>
             <div class="button operand" onclick="operandSelected(this)">/</div>
         </div>
@@ -75,7 +40,8 @@
             <div class="button operand" onclick="operandSelected(this)">+</div>
         </div>
         <div class="row">
-            <div class="button numeric doubleWidth" onclick="numberSelected(this)">0</div>
+            <div class="button setting" onclick="changeSign()">+/-</div>
+            <div class="button numeric" onclick="numberSelected(this)">0</div>
             <div class="button numeric" onclick="numberSelected(this)">.</div>
             <div class="button operand" onclick="caclulate()">=</div>
         </div>

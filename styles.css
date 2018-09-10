@@ -19,7 +19,7 @@ body {
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
 }
 
-#output {
+#screen {
     background-color: white;
     padding: 10px;
     justify-content: flex-end;
@@ -49,6 +49,7 @@ body {
     cursor: pointer;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
     user-select: none;
+    transition: color .3s, background-color .3s;
 }
 
 .button:hover {
@@ -65,6 +66,11 @@ body {
 
 .operand {
     background: orange;
+}
+
+.operand.selected {
+    background: white;
+    color: orange;
 }
 
 .numeric {
