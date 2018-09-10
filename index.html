@@ -9,40 +9,64 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <!-- <script src="main.js"></script> -->
     <script>
+        function changeSign() {
+            console.log('changeSign called');
+        }
+
+        function getPercent() {
+            console.log('getPercent called');
+        }
+
+        function operandSelected(operandElement) {
+            console.log('operandSelected called!');
+        }
+
+        function numberSelected(numberElement) {
+            console.log('numberSelected called!');
+        }
+
+        function clearScreen() {
+            console.log('clearScreen called!');
+        }
+
+        function caclulate() {
+            console.log('calculate called!');
+
+        }
     </script>
 </head>
 
 <body>
     <div id='calculator'>
-        <div id="output" class="row">4 + 7</div>
+        <div id="output" class="row"></div>
         <div class="row">
-            <div class="button setting">AC</div>
-            <div class="button setting">+/-</div>
-            <div class="button setting">%</div>
-            <div class="button operand">/</div>
+            <div class="button setting" onclick="clearScreen()">AC</div>
+            <div class="button setting" onclick="changeSign()">+/-</div>
+            <div class="button setting" onclick="getPercent()">%</div>
+            <div class="button operand" onclick="operandSelected(this)">/</div>
         </div>
         <div class="row">
-            <div class="button numeric">7</div>
-            <div class="button numeric">8</div>
-            <div class="button numeric">9</div>
-            <div class="button operand">*</div>
+            <div class="button numeric" onclick="numberSelected(this)">7</div>
+            <div class="button numeric" onclick="numberSelected(this)">8</div>
+            <div class="button numeric" onclick="numberSelected(this)">9</div>
+            <div class="button operand" onclick="operandSelected(this)">*</div>
         </div>
         <div class="row">
-            <div class="button numeric">4</div>
-            <div class="button numeric">5</div>
-            <div class="button numeric">6</div>
-            <div class="button operand">-</div>
+            <div class="button numeric" onclick="numberSelected(this)">4</div>
+            <div class="button numeric" onclick="numberSelected(this)">5</div>
+            <div class="button numeric" onclick="numberSelected(this)">6</div>
+            <div class="button operand" onclick="operandSelected(this)">-</div>
         </div>
         <div class="row">
-            <div class="button numeric">1</div>
-            <div class="button numeric">2</div>
-            <div class="button numeric">3</div>
-            <div class="button operand">+</div>
+            <div class="button numeric" onclick="numberSelected(this)">1</div>
+            <div class="button numeric" onclick="numberSelected(this)">2</div>
+            <div class="button numeric" onclick="numberSelected(this)">3</div>
+            <div class="button operand" onclick="operandSelected(this)">+</div>
         </div>
         <div class="row">
-            <div class="button numeric doubleWidth">0</div>
-            <div class="button numeric">.</div>
-            <div class="button operand">=</div>
+            <div class="button numeric doubleWidth" onclick="numberSelected(this)">0</div>
+            <div class="button numeric" onclick="numberSelected(this)">.</div>
+            <div class="button operand" onclick="caclulate()">=</div>
         </div>
     </div>
 </body>

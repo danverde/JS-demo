@@ -14,6 +14,7 @@ body {
     height: var(--calc-height);
     width: 300px;
     margin: auto;
+    margin-top: 40px;
     padding: 10px 15px;
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
 }
@@ -46,11 +47,16 @@ body {
     line-height: 73px;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    user-select: none;
 }
 
 .button:hover {
     filter: brightness(115%);
+}
+
+.button:active {
+    filter: brightness(100%);
 }
 
 .setting {
@@ -72,5 +78,5 @@ body {
 }
 
 .doubleWidth {
-    width: calc((100% / 2) - 10px)
+    width: calc((100% / 2) - 5px)
 }
