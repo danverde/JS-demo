@@ -22,7 +22,18 @@
         }
 
         function numberSelected(numberElement) {
-            console.log('numberSelected called!');
+            /* get new item */
+            var numberValue = numberElement.innerHTML;
+            
+            /* get screen contents */
+            var screen = document.getElementById('output');
+            var screenText = screen.innerHTML;
+
+            /* add new item */
+            screenText += numberValue;
+
+            /* output to screen */
+            screen.innerHTML  = screenText;
         }
 
         function clearScreen() {
