@@ -7,25 +7,22 @@ var num1 = null,
 
 
 function getPercent() {
-    /* get percent & update screen */
+    /* get percent & update screen*/
     screen.innerHTML = parseInt(screen.innerHTML) / 100;
 }
 
 
 function changeSign() {
     /* get screen contents & current sign */
-    var value = parseInt(screen.innerHTML),
-        sign = Math.sign(value);
+    var value = parseInt(screen.innerHTML);
 
     /* reverse sign if not 0 */
-    if (sign === 0) {
-        return;
-    } else {
+    if (value !== 0) {
         value *= -1;
-    }
 
-    /* update screen */
-    screen.innerHTML = value;
+        /* update screen */
+        screen.innerHTML = value;
+    }
 }
 
 
@@ -40,6 +37,7 @@ function operandSelected(operandElement) {
     /* save num1 */
     num1 = parseInt(screen.innerHTML);
 
+    /* update keepScreen */
     keepScreen = false;
 }
 
@@ -53,12 +51,8 @@ function numberSelected(numberElement) {
     var screenText = screen.innerHTML;
 
     /* don't stack 0's */
-    if (screenText == '0') {
-        if (numberValue == '0') {
-            return;
-        } else if (numberValue != '.') {
-            screenText = '';
-        }
+    if (screenText == '0' && numberValue != '.') {
+        keepScreen = false;
     }
 
     if (keepScreen === true) {
