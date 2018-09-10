@@ -7,9 +7,78 @@
     <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <script src="calculator.js"></script>
-    <!-- <script>
-    </script> -->
+    <!-- <script src="calculator.js"></script> -->
+    <script>
+        var num1 = null,
+            keepScreen = true,
+            screen;
+
+        function getPercent() {
+            console.log('getPercent called!');
+            /* get percent */
+
+            /* update screen */
+        }
+
+        function changeSign() {
+            console.log('changeSign called!');
+            /* get screen contents & current sign */
+            
+            /* reverse sign if not 0 */
+
+            /* update screen */
+        }
+
+        function operandSelected(operandElement) {
+            console.log('operandSelected called!');
+
+            /* remove existing operand if needed */
+
+            /* select new operand */
+
+            /* save screen contents to num1 */
+        }
+
+        function numberSelected(numberElement) {
+            console.log('numberSelected called!');
+            /* get new number */
+
+            /* get screen contents */
+
+            /* don't stack 0's */
+
+            /* do we want to overwrite screen contents? */
+                /* add new number to screen */
+                /* set screen to new number */
+
+            /* update screen */
+        }
+
+        function cancelEntry() {
+            console.log('cancelEntry called!');
+            /* reset screen */
+        }
+
+        function allClear() {
+            console.log('allClear called!');
+            /* reset screen */
+
+            /* reset other num1 & keepScreen */
+        }
+
+        function calculate() {
+            console.log('calculate called!');
+            /* get operand */
+
+            /* do math */
+
+            /* update screen */
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            screen = document.getElementById('screen');
+        });
+    </script>
 </head>
 
 <body>

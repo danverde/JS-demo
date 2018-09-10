@@ -7,20 +7,24 @@ var num1 = null,
 
 
 function getPercent() {
+    /* get percent & update screen */
     screen.innerHTML = parseInt(screen.innerHTML) / 100;
 }
 
 
 function changeSign() {
+    /* get screen contents & current sign */
     var value = parseInt(screen.innerHTML),
         sign = Math.sign(value);
 
+    /* reverse sign if not 0 */
     if (sign === 0) {
         return;
     } else {
         value *= -1;
     }
 
+    /* update screen */
     screen.innerHTML = value;
 }
 
@@ -41,7 +45,7 @@ function operandSelected(operandElement) {
 
 
 function numberSelected(numberElement) {
-    /* get new item */
+    /* get new number */
     var numberValue = numberElement.innerHTML;
 
     /* get screen contents */
