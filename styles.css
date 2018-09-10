@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --calc-height: 500px;
+}
+
+body {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+#calculator {
+    background-color: gray;
+    border-radius: 10px;
+    height: var(--calc-height);
+    width: 300px;
+    margin: auto;
+    padding: 10px 15px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
+}
+
+#output {
+    background-color: white;
+    padding: 10px;
+    justify-content: flex-end;
+    border-radius: 5px;
+}
+
+.row {
+    align-items: center;
+    font-size: 30pt;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 7px;
+    width: 100%;
+    display: flex;
+    height: calc((var(--calc-height) - 45px) / 6);
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.button {
+    /* border: 1px solid green; */
+    height: 100%;
+    width: calc((100% / 4) - 10px);
+    text-align: center;
+    line-height: 73px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.button:hover {
+    filter: brightness(115%);
+}
+
+.setting {
+    background: lightgray;
+}
+
+.operand {
+    background: orange;
+}
+
+.numeric {
+    background: #203044;
+    color: white;
+
+}
+
+.numeric:hover {
+    filter: brightness(140%);
+}
+
+.doubleWidth {
+    width: calc((100% / 2) - 10px)
+}
