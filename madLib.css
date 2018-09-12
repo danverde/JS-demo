@@ -22,3 +22,16 @@ button,
 input {
     margin-top: 15px;
 }
+
+button {
+    font-size: 14pt;
+    color: white;
+    background: #2f2fcc;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2828ac;
+}
